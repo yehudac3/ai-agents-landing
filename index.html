@@ -616,7 +616,7 @@ footer p { font-size: 0.75rem; color: rgba(255,255,255,0.3); }
       <button class="lang-btn active" id="btn-en" onclick="setLang('en')">English</button>
     </div>
     <a href="#contact" class="nav-cta">
-      <span class="he lang-data">קבעו פגישת ייעוץ</span>
+      <span class="he lang-data">תיאום פגישה</span>
       <span class="en lang-data">Schedule</span>
     </a>
   </div>
@@ -637,7 +637,7 @@ footer p { font-size: 0.75rem; color: rgba(255,255,255,0.3); }
     </div>
 
     <h1>
-      <span class="he lang-data">יישום מעשי של <span class="hl">בינה מלאכותית</span><br>בתהליכים ארגוניים</span>
+      <span class="he lang-data">שימוש מעשי ב<span class="hl">בינה מלאכותית</span><br>בתהליכים ארגוניים</span>
       <span class="en lang-data">Practical <span class="hl">AI Agents</span><br>for Organizational Processes</span>
     </h1>
 
@@ -651,7 +651,7 @@ footer p { font-size: 0.75rem; color: rgba(255,255,255,0.3); }
     </p>
 
     <a href="#contact" class="btn-hero">
-      <span class="he lang-data">קבעו פגישת ייעוץ</span>
+      <span class="he lang-data">תיאום פגישה</span>
       <span class="en lang-data">Schedule a Consultation</span>
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
     </a>
@@ -672,10 +672,10 @@ footer p { font-size: 0.75rem; color: rgba(255,255,255,0.3); }
         </div>
       </div>
       <div>
-        <div class="stat-val">30<b>+</b></div>
+        <div class="stat-val">5<b>+</b></div>
         <div class="stat-lbl">
-          <span class="he lang-data">סוכני AI ארגוניים שניתן לבנות</span>
-          <span class="en lang-data">Organizational AI Agents Buildable</span>
+          <span class="he lang-data">סוגי סוכני AI</span>
+          <span class="en lang-data">AI Agent Types</span>
         </div>
       </div>
     </div>
@@ -1062,11 +1062,11 @@ footer p { font-size: 0.75rem; color: rgba(255,255,255,0.3); }
             <div class="c-val">054-563-7590</div>
           </div>
         </a>
-        <a href="/cdn-cgi/l/email-protection#5c05393429383d3f6f1c3b313d3530723f3331" class="c-item">
+        <a href="mailto:Yehudac3@gmail.com" class="c-item">
           <div class="c-icon">✉️</div>
           <div>
             <div class="c-label">Email</div>
-            <div class="c-val"><span class="__cf_email__" data-cfemail="643d010c1100050757240309050d084a070b09">[email&#160;protected]</span></div>
+            <div class="c-val">Yehudac3@gmail.com</div>
           </div>
         </a>
         <a href="https://www.linkedin.com/in/yehudacindstrialeng/" target="_blank" class="c-item">
@@ -1093,8 +1093,8 @@ footer p { font-size: 0.75rem; color: rgba(255,255,255,0.3); }
           <span class="he lang-data">פגישה ראשונית ללא עלות לבדיקת התאמה וזיהוי הזדמנויות ל-AI בארגון שלכם. נדון בתהליכים, באתגרים ובאיך AI יכול לעבוד בשבילכם.</span>
           <span class="en lang-data">A free initial meeting to explore fit and identify AI opportunities in your organization. We'll discuss your processes, challenges and how AI can work for you.</span>
         </p>
-        <a href="/cdn-cgi/l/email-protection#ffa69a978a9b9e9cccbf98929e9693d19c9092c08c8a9d959a9c8bc2bc90918c8a938b9e8b969091dfad9a8e8a9a8c8b" class="btn-cta-main">
-          <span class="he lang-data">קבעו פגישת ייעוץ</span>
+        <a href="mailto:Yehudac3@gmail.com?subject=Consultation Request" class="btn-cta-main">
+          <span class="he lang-data">שלחו הודעה לתיאום</span>
           <span class="en lang-data">Send a Message to Schedule</span>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
@@ -1109,7 +1109,7 @@ footer p { font-size: 0.75rem; color: rgba(255,255,255,0.3); }
   <div class="footer-mark">YC // AI AGENTS</div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 // Language toggle
 let currentLang = 'en';
 
@@ -1132,4 +1132,11 @@ window.addEventListener('scroll', () => {
   document.getElementById('main-nav').classList.toggle('scrolled', window.scrollY > 40);
 });
 
-// Intersection Observer for fade-up ani
+// Intersection Observer for fade-up animations
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+}, { threshold: 0.12 });
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
